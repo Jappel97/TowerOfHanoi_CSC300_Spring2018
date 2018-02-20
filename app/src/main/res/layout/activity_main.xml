@@ -11,7 +11,16 @@
         android:layout_height="495dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteY="8dp"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/stackNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:text="Tower Number" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -19,86 +28,72 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
+                android:id="@+id/PopBtn"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Place Holder for Disk" />
+                android:onClick="popBtnPressed"
+                android:text="Pop" />
+
+            <Button
+                android:id="@+id/PushBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="pushBtnPressed"
+                android:text="Push" />
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/tower0Button"
+            <TextView
+                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="pop" />
+                android:text="Register 1:"
+                android:textColorLink="@android:color/black"
+                android:textSize="24sp"
+                tools:textColor="@android:color/black" />
 
-            <Button
-                android:id="@+id/tower1Button"
+            <TextView
+                android:id="@+id/Reg1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="pop" />
-
-            <Button
-                android:id="@+id/tower2Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="pop" />
+                android:text="<R1 Value>"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="100%"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <LinearLayout
-                android:id="@+id/tower0"
+                android:id="@+id/s0View"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="33%"
-                android:gravity="bottom"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/disk0"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="==" />
-
-                <Button
-                    android:id="@+id/disk1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="====" />
-
-                <Button
-                    android:id="@+id/disk2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="======" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/tower1"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="33%"
                 android:orientation="vertical"></LinearLayout>
 
             <LinearLayout
-                android:id="@+id/tower2"
+                android:id="@+id/s1View"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="33%"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/s2View"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical"></LinearLayout>
         </LinearLayout>
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
