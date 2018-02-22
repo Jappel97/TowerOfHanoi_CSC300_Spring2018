@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         int temp = Integer.parseInt(this.stackNum.getText().toString());
         if(Reg1 != null)
         {
-            Toast.makeText(this, "Register is full!", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Register is full!", Toast.LENGTH_SHORT).show();
         }
         else if(temp == 0)
         {
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else
         {
-            Toast.makeText(this, "Invalid tower number", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Invalid tower number", Toast.LENGTH_SHORT).show();
         }
         Reg1.setText(reg1.getSize());
         moves++;
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         int temp = Integer.parseInt(this.stackNum.getText().toString());
         if(reg1 == null)
         {
-            Toast.makeText(this, "Register is empty!", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Register is empty!", Toast.LENGTH_SHORT).show();
         }
         else if(temp == 0)
         {
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
             }
             else
             {
-                Toast.makeText(this, "Cannot fit onto smaller disk!", Toast.LENGTH_SHORT);
+                Toast.makeText(this, "Cannot fit onto smaller disk!", Toast.LENGTH_SHORT).show();
             }
         }
         else if(temp == 1)
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
             }
             else
             {
-                Toast.makeText(this, "Cannot fit onto smaller disk!", Toast.LENGTH_SHORT);
+                Toast.makeText(this, "Cannot fit onto smaller disk!", Toast.LENGTH_SHORT).show();
             }
         }
         else if(temp == 2)
@@ -127,17 +127,17 @@ public class MainActivity extends AppCompatActivity {
             }
             else
             {
-                Toast.makeText(this, "Cannot fit onto smaller disk!", Toast.LENGTH_SHORT);
+                Toast.makeText(this, "Cannot fit onto smaller disk!", Toast.LENGTH_SHORT).show();
             }
         }
         else
         {
-            Toast.makeText(this, "Invalid tower number", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Invalid tower number", Toast.LENGTH_SHORT).show();
         }
         Reg1.setText(reg1.getSize());
         if(s2.checkWin())
         {
-            Toast.makeText(this, "You Win!", Toast.LENGTH_LONG);
+            Toast.makeText(this, "You Win!", Toast.LENGTH_LONG).show();
             win = true;
         }
         this.numMoves.setText("" + moves);
