@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">TowerOfHanoi_CSC300_Spring2018</string>
+    <string name="r1_value"><![CDATA[<R1 Value>]]></string>
+    <string name="register_1">Register 1:</string>
+    <string name="______">______</string>
 </resources>

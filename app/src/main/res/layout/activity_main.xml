@@ -10,9 +10,18 @@
         android:layout_width="368dp"
         android:layout_height="495dp"
         android:orientation="vertical"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:ignore="MissingConstraints">
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/numMoves"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/stackNum"
@@ -31,7 +40,6 @@
                 android:id="@+id/PopBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:onClick="popBtnPressed"
                 android:text="Pop" />
 
@@ -39,7 +47,6 @@
                 android:id="@+id/PushBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:onClick="pushBtnPressed"
                 android:text="Push" />
 
@@ -48,15 +55,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Register 1:"
+                android:text="@string/register_1"
                 android:textColorLink="@android:color/black"
                 android:textSize="24sp"
                 tools:textColor="@android:color/black" />
@@ -65,14 +70,13 @@
                 android:id="@+id/Reg1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="<R1 Value>"
+                android:text="@string/r1_value"
                 android:textColor="@android:color/black"
                 android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -80,19 +84,50 @@
                 android:id="@+id/s0View"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="vertical"></LinearLayout>
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/base1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/______"
+                    android:textColorLink="@android:color/black"
+                    android:textSize="24sp"
+                    tools:textColor="@android:color/black" />
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/s1View"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="vertical"></LinearLayout>
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/base2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/______"
+                    android:textColorLink="@android:color/black"
+                    android:textSize="24sp"
+                    tools:textColor="@android:color/black" />
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/s2View"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="vertical"></LinearLayout>
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/base3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/______"
+                    android:textColorLink="@android:color/black"
+                    android:textSize="24sp"
+                    tools:textColor="@android:color/black" />
+            </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>

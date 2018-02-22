@@ -57,6 +57,7 @@ public class Tower
 
     public void display(ViewGroup v, Context c)
     {
+        v.removeAllViews();
         Disk counter = this.root.getNextDisk();
         do
         {
@@ -78,5 +79,28 @@ public class Tower
             this.prev = this.top;
             this.top = d1;
         }
+    }
+
+    public boolean checkWin()
+    {
+        Disk tempNode;
+        if(root != null)
+        {
+            tempNode = root.getNextDisk();
+            while(tempNode != null)
+            {
+                if(root.getSize() > root.getNextDisk().getSize())
+                {
+                    root = root.getNextDisk();
+                    continue;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        return false;
     }
 }
